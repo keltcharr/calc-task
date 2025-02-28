@@ -11,19 +11,12 @@ let i = 0;
 // debugger;
 
 do {
-    // inputValue = Number(prompt(`Введите ${i + 1} число. Текущий пример:\n${mathExpression}`));
     inputValue = inputNumber();
     numbers[i] = inputValue;
-    // inputOperator = prompt("Введите математический оператор (+, -, *, /, =)");
     inputOperator = inputMathOperator();
     mathOperator[i] = inputOperator;
     mathExpression += inputValue + " " + inputOperator + " ";
-    console.log(`=============================
-    шаг: ${i}
-    выражение: ${mathExpression}
-    число: ${numbers[i]}
-    оператор: ${mathOperator[i]}
-    =============================`)
+    log();
     i++;
 } while (inputOperator !== "=");
 
@@ -73,5 +66,13 @@ function inputMathOperator() {
             operator = prompt("Вы ввели не оператор! Повторите ввод (+, -, *, /, =)")
         };
     };
-};
+};1
 
+function log() {
+    console.log(`=============================
+        шаг: ${i}
+        выражение: ${mathExpression}
+        число: ${numbers[i]}
+        оператор: ${mathOperator[i]}
+        =============================`)
+};
