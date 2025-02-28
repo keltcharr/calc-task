@@ -66,7 +66,7 @@ function inputMathOperator() {
             operator = prompt("Вы ввели не оператор! Повторите ввод (+, -, *, /, =)")
         };
     };
-};1
+};
 
 function log() {
     console.log(`=============================
